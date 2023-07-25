@@ -1,0 +1,34 @@
+// {
+//   "version": 2,
+//   "builds": [
+//     {
+//       "src": "server.js",
+//       "use": "@vercel/node"
+//     },
+//     {
+//       "src": "frontend/package.json",
+//       "use": "@vercel/static-build"
+//     }
+//   ],
+//   "routes": [
+//     {
+//       "src": "/api/v1/(.*)",
+//       "dest": "server.js"
+//     },
+//     {
+//       "src": "/(.*)",
+//       "dest": "/frontend/index.html"
+//     } 
+//   ]
+// }
+
+{
+  "rewrites":[
+    {
+      "source":"/api/v1/(.*)",
+      "destination": "/api/v1"
+    }
+    
+
+  ]
+}
