@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://quizqpp.onrender.com//api/v1/auth', formData);
+      const response = await axios.post('https://quizqpp.onrender.com/api/v1/auth', formData);
       const token = response.data.token; // Token received from the backend
       localStorage.setItem('accessToken',token);
       console.log('User logged in successfully!');
