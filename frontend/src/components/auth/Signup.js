@@ -19,7 +19,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/v1/users', formData);
+      const response = await axios.post('https://quizqpp.onrender.com/api/v1/users', formData);
       console.log(response.data); // You can handle success messages here
       navigate('/'); // Redirect to the login page after successful signup
     } catch (error) {

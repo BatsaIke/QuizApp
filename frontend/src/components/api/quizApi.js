@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api/v1', // Adjust the URL if the backend is running on a different port
+  baseURL: 'https://quizqpp.onrender.com/api/v1', // Adjust the URL if the backend is running on a different port
 });
 
 export const fetchQuizQuestions = async () => {
