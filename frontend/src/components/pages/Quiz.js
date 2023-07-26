@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchQuizQuestionsAsync, selectQuizQuestions } from './features/quiz/quizSlice';
-import QuizQuestion from './QuizQuestion';
-import '../App.css'
+import { fetchQuizQuestionsAsync, selectQuizQuestions } from '../features/quiz/quizSlice';
+import QuizQuestion from '../QuizQuestion';
+import '../../App.css'
 
 const Quiz = () => {
   const dispatch = useDispatch();
@@ -117,9 +117,9 @@ const Quiz = () => {
 
       {isQuizCompleted ? (
         <div>
-          <h3>Quiz Completed!</h3>
+          <h3 className='qqiestion'>Quiz Completed!</h3>
           <p>Total Score: {totalScore}</p>
-          <button onClick={handleResetQuiz}>Start Over</button>
+          <button onClick={handleResetQuiz} className='startover'>Start Over</button>
         </div>
       ) : (
         isOptionSelected && !isQuizCompleted && (

@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Quiz from './components/Quiz';
+import Quiz from './components/pages/Quiz';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
-import Navbar from './components/Navbar';
+import Navbar from './components/features/Navbar';
 // import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {

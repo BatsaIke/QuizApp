@@ -1,53 +1,23 @@
-/* Quiz.css */
-
-.quiz-container {
-  position: fixed; /* Set the position to fixed */
-  top: 50%; /* Align the top edge to the middle of the viewport */
-  left: 50%; /* Align the left edge to the middle of the viewport */
-  transform: translate(-50%, -50%); /* Use transform to center the element */
-  max-width: 700px;
-  min-width: 700px;
+/* quiz score */
+.qqiestion{
+  color: aliceblue;
+  font-size: 36px;
 }
-
-
-
-
-/* Apply a larger font size to the quiz questions */
-.quiz-question {
-  font-size: 20px;
+/* quiz paragraph */
+p{
+  color: aliceblue;
+  font-size:24px;
+  text-align: center;
 }
-
-/* Style the options for each question (customize as needed) */
-.quiz-option {
-  font-size: 16px;
-  margin-bottom: 10px;
+.startover{
+  background-color: #ffff;
+  color: black;
   padding: 10px;
-  border: 1px solid #ccc;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
   border-radius: 5px;
-  cursor: pointer;
 }
-
-/* Add a hover effect for the quiz options (customize as needed) */
-.quiz-option:hover {
-  background-color: #f0f0f0;
-}
-
-/* Style the submit button (customize as needed) */
-.quiz-submit {
-  background-color: #007bff;
-  color: #fff;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Add a hover effect for the submit button (customize as needed) */
-.quiz-submit:hover {
-  background-color: #0056b3;
-}
-
 /* Alert.css */
 
 .alert {
