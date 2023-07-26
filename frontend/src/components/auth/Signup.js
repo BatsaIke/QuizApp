@@ -51,7 +51,7 @@ const Signup = () => {
 					<i className="button__icon fas fa-chevron-right"></i>
 				</button>
         <button className="button login__submit" type="submit" >
-          <Link to='/signup'>
+          <Link to='/'>
 					<span className="button__text">or Sign in here</span>
 					<i className="button__icon fas fa-chevron-right"></i>
           </Link>
