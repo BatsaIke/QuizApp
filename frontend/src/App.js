@@ -6,7 +6,7 @@ import Quiz from './components/Quiz';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import Navbar from './components/Navbar';
-import ProtectedRoute from './components/ProtectedRoute';
+// import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
