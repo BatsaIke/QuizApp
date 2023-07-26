@@ -479,3 +479,5 @@
 20230726	16:45:20	76c6413e-9236-4e4d-8b7d-7be118a82ef9	GET	/api/v1/quiz	http://localhost:3000
 20230726	16:45:28	04b6a190-957a-41a8-994d-311d15b55c10	GET	/api/v1/quiz	http://localhost:3000
 20230726	16:45:28	66cd8035-c3f4-4159-a86c-d783ab3496ff	GET	/api/v1/quiz	http://localhost:3000
+20230726	16:49:06	513a8508-cdbe-4c5d-922f-90ac37d3babe	GET	/api/v1/quiz	http://localhost:3000
+20230726	16:49:07	59a722e2-b6ad-47d0-af63-4c36b477e7c9	GET	/api/v1/quiz	http://localhost:3000

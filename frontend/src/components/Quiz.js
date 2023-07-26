@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchQuizQuestionsAsync, selectQuizQuestions } from './features/quiz/quizSlice';
 import QuizQuestion from './QuizQuestion';
-import './Quiz.css'; // Import the Quiz.css file for styling
+import '../App.css'
 
 const Quiz = () => {
   const dispatch = useDispatch();

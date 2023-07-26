@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  useNavigate, } from "react-router-dom";
+import {  useNavigate, Link} from "react-router-dom";
 import axios from 'axios';
 
 const Signup = () => {
@@ -28,25 +28,47 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
-        </div>
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
+    
+<div className="container">
+	<div className="screen">
+		<div className="screen__content">
+    <span className="button__text">Sign up now</span>
+			<form className="login" onSubmit={handleSubmit}>
+				<div className="login__field">
+					<i className="login__icon fas fa-user"></i>
+					<input type="text" name="name" value={formData.name} onChange={handleChange}  className="login__input" placeholder="name"/>
+				</div>
+        <div className="login__field">
+					<i className="login__icon fas fa-lock"></i>
+					<input type="email" name="email" value={formData.email} onChange={handleChange} className="login__input" placeholder="Password"/>
+				</div>
+				<div className="login__field">
+					<i className="login__icon fas fa-lock"></i>
+					<input type="password" name="password" value={formData.password} onChange={handleChange} className="login__input" placeholder="Password"/>
+				</div>
+				<button className="button login__submit" type="submit" >
+					<span className="button__text">Sign up</span>
+					<i className="button__icon fas fa-chevron-right"></i>
+				</button>
+        <button className="button login__submit" type="submit" >
+          <Link to='/signup'>
+					<span className="button__text">or Sign in here</span>
+					<i className="button__icon fas fa-chevron-right"></i>
+          </Link>
+				</button>					
+			</form>
+		</div>
+		<div className="screen__background">
+			<span className="screen__background__shape screen__background__shape4"></span>
+			<span className="screen__background__shape screen__background__shape3"></span>		
+			<span className="screen__background__shape screen__background__shape2"></span>
+			<span className="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
   );
 };
 
 export default Signup;
+
+

@@ -2,6 +2,7 @@
 import React from 'react';
 import './QuizQuestions.css'; // Import the QuizQuestion.css file
 
+
 const QuizQuestion = ({
   question,
   options,

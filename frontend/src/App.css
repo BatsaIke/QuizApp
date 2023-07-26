@@ -1,26 +1,45 @@
-/* src/styles.css */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav li {
-    margin-right: 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
+/* Quiz.css */
+
+/* Center the quiz component on the page */
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Set a minimum height to fill the viewport */
+}
+
+/* Apply a larger font size to the quiz questions */
+.quiz-question {
+  font-size: 20px;
+}
+
+/* Style the options for each question (customize as needed) */
+.quiz-option {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add a hover effect for the quiz options (customize as needed) */
+.quiz-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style the submit button (customize as needed) */
+.quiz-submit {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add a hover effect for the submit button (customize as needed) */
+.quiz-submit:hover {
+  background-color: #0056b3;
+}

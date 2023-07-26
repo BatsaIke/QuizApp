@@ -1,75 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+// App.js
+
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Quiz from './components/Quiz';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
-import './App.css'; // Import the CSS file for external styling
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate(); // Hook to programmatically navigate
 
   useEffect(() => {
-    // Check if the user is already logged in (e.g., by checking if a token is present in local storage)
-    const token = localStorage.getItem('token'); // Replace 'token' with the actual name of your token key
-    if (token) {
-      // If the user is logged in, navigate directly to the /quiz page
-      navigate('/quiz');
-      setIsLoggedIn(true); // Update login status to true
-    } else {
-      setIsLoggedIn(false); // Update login status to false
-    }
-  }, [navigate]);
+    // Check if the user is already logged in 
+    const accessToken = localStorage.getItem('accessToken');
+    setIsLoggedIn(accessToken !== null); // Set isLoggedIn to true if accessToken is present, otherwise set to false
+  }, []);
 
-  // Function to handle the logout action
-  const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove the token from local storage
-    setIsLoggedIn(false); // Update login status to false
+ 
+  const handleLogin = (accessToken) => {
+    localStorage.setItem('accessToken', accessToken);
+    setIsLoggedIn(true);
+    // Navigate to the quiz page after successful login
+    navigate('/quiz');
   };
 
-  // Function to render the navigation links based on user authentication status
-  const renderNavigationLinks = () => {
-    if (isLoggedIn) {
-      // User is logged in, show "Home" and "Logout" buttons
-      return (
-        <>
-          <li>
-            <Link to="/quiz">Home</Link>
-          </li>
-          <li>
-            <button onClick={handleLogout}>Logout</button>
-          </li>
-        </>
-      );
-    } else {
-      // User is logged out, show "Login" and "Sign Up" buttons
-      return (
-        <>
-          <li>
-            <Link to="/">Log In</Link>
-          </li>
-          <li>
-            <Link to="/signup">Sign Up</Link>
-          </li>
-        </>
-      );
-    }
+  // Function to handle logout
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    setIsLoggedIn(false);
   };
 
   return (
-    <div className="container">
-      <nav>
-        <ul>
-          {renderNavigationLinks()}
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<Login />} />
-      </Routes>
-    </div>
+    <>
+      <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> {/* Pass isLoggedIn and handleLogout as props */}
+      <div className="container">
+        <Routes>
+          
+        <Route
+          path='quiz'
+           element={<Quiz />}  
+        />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<Login handleLogin={handleLogin} />} /> {/* Pass handleLogin as prop to Login */}
+        </Routes>
+      </div>
+    </>
   );
 }
 
