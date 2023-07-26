@@ -1,12 +1,16 @@
 /* Quiz.css */
 
-/* Center the quiz component on the page */
 .quiz-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Set a minimum height to fill the viewport */
+  position: fixed; /* Set the position to fixed */
+  top: 50%; /* Align the top edge to the middle of the viewport */
+  left: 50%; /* Align the left edge to the middle of the viewport */
+  transform: translate(-50%, -50%); /* Use transform to center the element */
+  max-width: 700px;
+  min-width: 700px;
 }
+
+
+
 
 /* Apply a larger font size to the quiz questions */
 .quiz-question {
@@ -42,4 +46,25 @@
 /* Add a hover effect for the submit button (customize as needed) */
 .quiz-submit:hover {
   background-color: #0056b3;
+}
+
+/* Alert.css */
+
+.alert {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Error alert style */
+.alert-error {
+  color: white;
+  background-color: rgb(228, 142, 142);
+}
+
+/* Success alert style */
+.alert-success {
+  color: white;
+  background-color: rgb(71, 238, 71);
 }

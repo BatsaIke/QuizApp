@@ -16,7 +16,7 @@ function App() {
     // Check if the user is already logged in 
     const accessToken = localStorage.getItem('accessToken');
     setIsLoggedIn(accessToken !== null); // Set isLoggedIn to true if accessToken is present, otherwise set to false
-  }, []);
+  }, [navigate]);
 
  
   const handleLogin = (accessToken) => {
@@ -30,6 +30,7 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem('accessToken');
     setIsLoggedIn(false);
+    navigate('/');
   };
 
   return (

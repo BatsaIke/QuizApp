@@ -1,9 +1,8 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import './Login.css'; // Import the CSS file for styling
-
+import './Login.css'; 
+import Alert from './Alert';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,6 +10,7 @@ const Login = () => {
     email: '',
     password: '',
   });
+  const [alert, setAlert] = useState(null); // State for displaying alerts
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,54 +22,79 @@ const Login = () => {
     try {
       const response = await axios.post('https://quizqpp.onrender.com/api/v1/auth', formData);
       const token = response.data.token; // Token received from the backend
-      localStorage.setItem('accessToken',token);
+      localStorage.setItem('accessToken', token);
       console.log('User logged in successfully!');
-      navigate('/quiz')
-    } catch (error) {
-      console.error(error); // Handle error messages here
-    }
-  }; 
+      
+      // Set the success alert
+      setAlert({ message: 'Login successful!', type: 'success' });
 
-  
+      // Redirect to the quiz page after 2 seconds
+      setTimeout(() => {
+        navigate('/quiz');
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+      setAlert({ message: 'Invalid email or password', type: 'error' });
+
+      // Reset the visible state to true after 3 seconds
+      setTimeout(() => {
+        setAlert(null);
+      }, 3000);
+    }
+  };
 
   return (
-   
-<div className="container">
-	<div className="screen">
-		<div className="screen__content">
-    <span className="button__text">Log In Now</span>
-			<form className="login" onSubmit={handleSubmit}>
-				<div className="login__field">
-					<i className="login__icon fas fa-user"></i>
-					<input  type="email" name="email" value={formData.email} onChange={handleChange}  className="login__input" placeholder="Email"/>
-				</div>
-				<div className="login__field">
-					<i className="login__icon fas fa-lock"></i>
-					<input type="password" name="password" value={formData.password} onChange={handleChange} className="login__input" placeholder="Password"/>
-				</div>
-				<button className="button login__submit" type="submit" >
-					<span className="button__text">Log In Now</span>
-					<i className="button__icon fas fa-chevron-right"></i>
-				</button>
-        <button className="button login__submit" type="submit" >
-          <Link to='/signup'>
-					<span className="button__text">or Sign up here</span>
-					<i className="button__icon fas fa-chevron-right"></i>
-          </Link>
-				</button>					
-			</form>
-		</div>
-		<div className="screen__background">
-			<span className="screen__background__shape screen__background__shape4"></span>
-			<span className="screen__background__shape screen__background__shape3"></span>		
-			<span className="screen__background__shape screen__background__shape2"></span>
-			<span className="screen__background__shape screen__background__shape1"></span>
-		</div>		
-	</div>
-</div>
+    <div className="container">
+      <div className="screen">
+        <div className="screen__content">
+          {/* Render the alert if it exists */}
+          {alert && <Alert message={alert.message} type={alert.type} />}
+
+          <span className="button__text">Log In Now</span>
+          <form className="login" onSubmit={handleSubmit}>
+            <div className="login__field">
+              <i className="login__icon fas fa-user"></i>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="login__input"
+                placeholder="Email"
+              />
+            </div>
+            <div className="login__field">
+              <i className="login__icon fas fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="login__input"
+                placeholder="Password"
+              />
+            </div>
+            <button className="button login__submit" type="submit">
+              <span className="button__text">Log In Now</span>
+              <i className="button__icon fas fa-chevron-right"></i>
+            </button>
+            <button className="button login__submit">
+              <Link to="/signup">
+                <span className="button__text">or Sign up here</span>
+                <i className="button__icon fas fa-chevron-right"></i>
+              </Link>
+            </button>
+          </form>
+        </div>
+        <div className="screen__background">
+          <span className="screen__background__shape screen__background__shape4"></span>
+          <span className="screen__background__shape screen__background__shape3"></span>
+          <span className="screen__background__shape screen__background__shape2"></span>
+          <span className="screen__background__shape screen__background__shape1"></span>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Login;
-
-
