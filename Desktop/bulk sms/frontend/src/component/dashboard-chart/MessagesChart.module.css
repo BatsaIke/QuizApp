@@ -1,0 +1,14 @@
+/* MessagesChart.module.css */
+.chartContainer {
+    height: 500px; /* Adjust the height as needed */
+  }
+  
+  .chartHeading .specialChartHeading{
+    margin-bottom: 40px; /* Adjust as needed */
+    text-align: center;
+    color: #333; /* Example color */
+    font-size: 24px; /* Example font size */
+  }
+  .specialChartHeading{
+    background-color: rgba(225, 187, 24, 0.2); 
+  }

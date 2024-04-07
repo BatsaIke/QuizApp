@@ -1,0 +1,138 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  padding: 20px;
+  margin-left: 250px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.box, .specialBox {
+  flex: 1;
+  background-color: rgba(75, 192, 192, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; 
+}
+.specialBox {
+  color: #fff;
+  background-color: rgba(0, 83, 155, 0.71); 
+  
+}
+
+.boxMain, .specialBoxMain {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #011a03;
+}
+
+.specialBoxMain{
+  color: #fff;
+}
+.miniBox, .specialMiniBox {
+  margin-top: 0;
+  color: #011a03;
+}
+.specialMiniBox{
+  color: #fff;
+}
+.NavLink {
+  text-decoration: none;
+}
+.specialNavLink {
+background-color:   rgba(0,82,155,255); 
+}
+
+.halfBox {
+  display: flex;
+  flex-basis: calc(50% - 10px); 
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.datePicker {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.halfBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(50% - 10px); 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-decoration: none; 
+}
+
+.dashboardHeader, .specialDashboardHeader{
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  color: #333; 
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 20px; 
+}
+.specialDashboardHeader{
+  background-color: rgba(225, 187, 24, 0.2); 
+
+}
+/* Adjust .box and .halfBox to have a more responsive design */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    margin-left: 0; /* Removes left margin on smaller screens */
+  }
+
+  .row {
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+    gap: 10px; /* Adjusts gap for smaller screens */
+  }
+
+  .box, .halfBox {
+    flex: 1 1 calc(50% - 10px); /* Adjusts boxes to take half the container width, accounting for gap */
+    max-width: calc(50% - 10px); /* Ensures boxes do not exceed half the container width */
+  }
+}
+  /* Specific adjustments for smaller screens (e.g., mobile) */
+  @media (max-width: 480px) {
+    .box, .halfBox {
+      flex-basis: 100%; /* Each box takes full width of the container */
+      max-width: 100%; /* Ensures boxes do not exceed container width */
+    }
+  }
+
+  @media (max-width: 1024px) { /* Targeting tablets and below */
+    .box {
+      display: flex;
+      flex-direction: column;
+    }
+    .NavLink{
+      text-align: center;
+    }
+    
+  }

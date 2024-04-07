@@ -1,0 +1,99 @@
+/* ComposeMail.module.css */
+.composeMail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .composeTextArea {
+    margin: 10px 0;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  .composeModalContacts {
+    width:max-content;
+    margin: 0 auto;
+  }
+
+  .composeModalCustomStyle{
+   
+    width:50%;
+  
+  }
+
+  .confirmSelection {
+ position: fixed; /* Or 'fixed', depending on requirement */
+    background-color: #4CAF50;
+    color: #ffffff;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10; /* Ensure it's above other content */
+    /* Ensure it's inside the modal or a container with 'position: relative;' */
+  }
+  
+
+  @media (max-width: 768px) {
+    .composeMail {
+      margin: 10px; /* Reduced margin for smaller screens */
+      width: calc(100% - 20px); /* Full width with a little margin */
+      box-sizing: border-box; /* Include padding and border in the element's width */
+    }
+  
+    .composeTextArea {
+      margin: 5px 0; /* Reduced margin for smaller screens */
+    }
+  
+    .actions {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+  
+    .confirmSelection {
+      width: calc(100% - 20px); /* Full width with a little margin */
+      bottom: 0; /* Align to the bottom of the screen */
+      left: 0; /* Align to the left of the screen */
+      border-radius: 0; /* Remove border radius if you want it to cover the corners */
+    }
+  
+    .composeModalCustomStyle {
+      width: 100%; /* Full width for modal on smaller screens */
+    }
+  }
+  
+  /* Styles for screens less than or equal to 480px wide (mostly phones) */
+  @media (max-width: 480px) {
+    /* Further reduce margins/padding and adjust sizes as needed for smaller phones */
+    .composeMail {
+      margin: 5px; /* Even smaller margin for small phones */
+      padding: 10px; /* Smaller padding */
+    }
+  
+    /* You can continue adjusting other elements similarly based on your design requirements */
+  }

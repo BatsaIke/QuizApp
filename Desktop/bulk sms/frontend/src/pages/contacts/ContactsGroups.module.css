@@ -1,0 +1,157 @@
+/* ContactsGroups.module.css */
+
+.container {
+  margin-left: 260px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input,
+.textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ 
+}
+
+.button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.group > div {
+  margin: 0 10px;
+}
+.header {
+  font-size: 24px; /* Adjust size as needed */
+text-align: center;
+padding: 20px;
+color: #333; /* Adjust color as needed */
+background-color: #f5f5f5; /* Light background, adjust as needed */
+border-bottom: 1px solid #ddd; /* Subtle separator, adjust as needed */
+margin-bottom: 20px
+}
+
+.groupsList table {
+  width: 100%; /* Ensure table uses full width of its container */
+  border-collapse: collapse; /* Remove space between borders */
+  margin-top: 20px; /* Space above the table */
+}
+
+.groupsList th,
+.groupsList td {
+  border-bottom: 1px solid #eee; /* Light border for each row */
+  padding: 8px; /* Spacing within each cell */
+  text-align: left; /* Align text to the left */
+}
+
+.groupsList th {
+  background-color: #f9f9f9; /* Light background for headers */
+  color: #333; /* Dark text color for contrast */
+}
+
+.groupModal{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 40%;
+  padding: 20px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+font-size: 14px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width value to align it */
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.actionIcon{
+  margin-right: 12px;
+}
+.actionIcon {
+  font-size: 24px; 
+}
+
+.confirmationModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.confirmationButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 80px;
+}
+
+.yesButton {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.noButton {
+  background-color: #1890ff;
+  color: white;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}

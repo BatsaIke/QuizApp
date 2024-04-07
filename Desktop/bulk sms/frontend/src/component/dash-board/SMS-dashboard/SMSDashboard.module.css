@@ -1,0 +1,27 @@
+/* SMSDashboard.module.css */
+.smsDashboard {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+  }
+  
+  
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* Targeting tablets and below */
+  .smsDashboard {
+
+    margin-left: 250; /* Remove margin for smaller screens */
+    padding: 15px; /* Slightly reduce padding */
+  }
+}
+
+@media (max-width: 768px) { /* Targeting smaller tablets and large phones */
+  .smsDashboard {
+    padding: 10px; /* Further reduce padding for smaller devices */
+  }
+}
+
+@media (max-width: 480px) { /* Targeting mobile phones */
+  .smsDashboard {
+    padding: 5px; /* Minimize padding to maximize screen usage */
+  }
+}
