@@ -8,6 +8,7 @@ export const venueSecondSessionStyles: { [key: string]: SxProps<Theme> } = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+
   },
   header: {
     textAlign: "center",

@@ -1,11 +1,20 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { eventHeaderStyles } from './EventsHeaderStyles'; // Adjust path as necessary
-import headerLogoUrl from '../../../../assets/images/header/wosom-menu-icon-header.png'; // Sample logo path
+import callender from '../../../../assets/images/header/calendar-days-light 1.png';
+import taskList from '../../../../assets/images/header/clipboard-list-check-light 1.png';
+import calculator from '../../../../assets/images/header/calculator-light 1.png';
+import user from '../../../../assets/images/header/Vector.png';
+import settings from '../../../../assets/images/header/gear-light 1.png';
 
 const EventHeader: React.FC = () => {
-    // For demonstration, using the same image for all five
-    const icons = Array(5).fill(headerLogoUrl); // Mock icons array with same image
+    const icons = [
+        { src: callender, alt: 'Calendar' },
+        { src: taskList, alt: 'Task List' },
+        { src: calculator, alt: 'Calculator' },
+        { src: user, alt: 'User' },
+        { src: settings, alt: 'Settings' },
+    ];
 
     return (
         <Box sx={eventHeaderStyles.container}>
@@ -14,7 +23,12 @@ const EventHeader: React.FC = () => {
             </Box>
             <Box sx={eventHeaderStyles.rightIcons}>
                 {icons.map((icon, index) => (
-                    <img key={index} src={icon} alt={`Header Icon ${index + 1}`} />
+                    <img
+                        key={index}
+                        src={icon.src}
+                        alt={icon.alt}
+                        style={{ width: '22px', height: '25px', marginLeft: index === 0 ? '20px' : '15px' }}
+                    />
                 ))}
             </Box>
         </Box>

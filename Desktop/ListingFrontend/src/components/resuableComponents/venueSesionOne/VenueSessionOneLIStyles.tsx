@@ -13,6 +13,8 @@ export const venueSessionOneLIStyles: { [key: string]: SxProps<Theme> } = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 0',
+    marginBottom:"40px",
+
   },
   header: {
     textAlign: 'center',

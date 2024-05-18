@@ -43,7 +43,6 @@ const FifthSession: React.FC = () => {
 
   return (
     <Box sx={fifthSessionStyles.mainContainer}>
-      <Box sx={fifthSessionStyles.divider} />
 
       <Typography variant="h4" sx={fifthSessionStyles.sessionTitle}>
         RECOMMENDED PRIME PICKS FOR YOUR LUXURY WEDDING

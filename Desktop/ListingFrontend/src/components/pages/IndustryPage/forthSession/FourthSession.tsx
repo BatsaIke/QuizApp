@@ -85,6 +85,8 @@ const FourthSession = () => {
       <Button variant="contained" sx={fourthSessionStyles.viewMoreButton}>
         View More
       </Button>
+      <Box sx={fourthSessionStyles.divider} />
+
     </Box>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { venueSessionOneLIStyles } from './VenueSessionOneLIStyles';
-import image1 from '../../../../assets/images/wedding-venue/notLoggedin.png';
-import image2 from '../../../../assets/images/wedding-venue/loggedin.png';
-import iconRight from '../../../../assets/images/wedding-venue/iconRight.png';
-import iconLeft from '../../../../assets/images/wedding-venue/iconLeft.png';
+import image1 from '../../../assets/images/wedding-venue/notLoggedin.png';
+import image2 from '../../../assets/images/wedding-venue/loggedin.png';
+import iconRight from '../../../assets/images/wedding-venue/iconRight.png';
+import iconLeft from '../../../assets/images/wedding-venue/iconLeft.png';
 
 const categories = [
   { name: 'Bridal Wear', img: image1 },

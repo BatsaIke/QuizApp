@@ -10,6 +10,7 @@ export const venueSession1Styles: { [key: string]: SxProps<Theme> } = {
         alignItems: 'center',
         gap: 4, // Adjusted gap for better spacing
         padding: 2, // Add padding to the container
+        marginBottom:"80px",
     },
     contentContainer: {
         width: '80%', // Adjust width to center the content better

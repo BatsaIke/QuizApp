@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { venueSecondSessionStyles } from "./VenueSecondSessionStyles";
-import { venues } from "../../../utils/dummyData";
-import messageIcon from "../../../../assets/images/wedding-venue/messge.png";
-import ratingIcon from "../../../../assets/images/wedding-venue/rating.png";
-import savedIcon from "../../../../assets/images/wedding-venue/Saved.png";
-import userIcon from "../../../../assets/images/wedding-venue/user.png";
-import proIcon from "../../../../assets/images/wedding-venue/PRo.png";
-import proVerifiedIcon from "../../../../assets/images/wedding-venue/ProVerified.png";
-import heartIcon from "../../../../assets/images/wedding-venue/heart-solid (2) 1.png";
-import locationIcon from "../../../../assets/images/wedding-venue/location.png";
+import { venues } from "../../utils/dummyData";
+import messageIcon from "../../../assets/images/wedding-venue/messge.png";
+import ratingIcon from "../../../assets/images/wedding-venue/rating.png";
+import savedIcon from "../../../assets/images/wedding-venue/Saved.png";
+import userIcon from "../../../assets/images/wedding-venue/user.png";
+import proIcon from "../../../assets/images/wedding-venue/PRo.png";
+import proVerifiedIcon from "../../../assets/images/wedding-venue/ProVerified.png";
+import heartIcon from "../../../assets/images/wedding-venue/heart-solid (2) 1.png";
+import locationIcon from "../../../assets/images/wedding-venue/location.png";
 
 const VenueSecondSession: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState(12);

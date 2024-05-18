@@ -8,14 +8,17 @@ export const eventHeaderStyles: { [key: string]: SxProps<Theme> } = {
         justifyContent: 'space-between',
         background: 'white',
     },
+
+
+        
     contentContainer: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
         flexGrow: 1,
-        height: '50px',  
+        height: '61px',  
         padding: { xs: '0 10px', sm: '0 15px', md: '0 20px' },
-        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.10)',
+        boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.0)',
         borderRight: '1px solid transparent', 
         borderBottom: '1px solid #ddd',
         borderTop: '1px solid #ddd',
@@ -28,8 +31,7 @@ export const eventHeaderStyles: { [key: string]: SxProps<Theme> } = {
         fontWeight: '500',
         textTransform: 'capitalize',
         lineHeight: '25px',
-        marginLeft: { xs: '20px', sm: '50px', md: '100px', lg: '150px' },
-    },
+        marginLeft: '80px',    },
     rightIcons: {
         display: 'flex',
         alignItems: 'center',
