@@ -8,6 +8,7 @@ import WeddingVenue from '../../components/pages/WeddingVenue/WeddingVenueCompon
 import VenueLoggedIN from '../../components/pages/WeddingVenueLoggedIn/WeddingVenueLoggedIn';
 import Footer1 from '../../layout/Footer/Footer';
 import FooterMain from '../../components/footer/Footer';
+import CategoriesComponent from '../../components/pages/CategoriesPage/CategoriesComponent';
 
 function PublicRoutes() {
     return (
@@ -18,6 +19,8 @@ function PublicRoutes() {
             <Route path="/events" element={<Layout content={EventsPage} footer={FooterMain} />} />
             <Route path="/venue" element={<Layout content={WeddingVenue} footer={FooterMain} />} />
             <Route path="/venue-loggedin" element={<Layout content={VenueLoggedIN} footer={FooterMain} />} />
+            <Route path="/categories" element={<Layout content={CategoriesComponent} footer={FooterMain} />} />
+
         </Routes>
     );
 }
